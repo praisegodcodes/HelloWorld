@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>HelloWorld - Learn Languages for Free</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  body {
+    margin: 0;
+    font-family: 'Nunito', sans-serif;
+    background: #ffffff;
+    color: #333;
+  }
+  header {
+    background-color: #58cc02;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header h1 {
+    margin: 0;
+    color: white;
+    font-size: 1.8em;
+    font-family: 'Poppins', sans-serif;
+  }
+  nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  h2, h3, h4 {
+    font-family: 'Poppins', sans-serif;
+  }
+  nav a:hover {
+    text-decoration: underline;
+  }
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 20px;
+    background-color: #f7f9fb;
+    text-align: center;
+  }
+  .hero h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+  }
+  .hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    max-width: 600px;
+  }
+  .hero img {
+    max-width: 300px;
+    margin-bottom: 30px;
+  }
+  .cta-button {
+    background-color: #58cc02;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+  }
+  .cta-button:hover {
+    background-color: #4fa202;
+  }
+  .features, .languages, .testimonials {
+    padding: 60px 20px;
+    text-align: center;
+  }
+  .features h3, .languages h3, .testimonials h3 {
+    font-size: 2em;
+    margin-bottom: 40px;
+  }
+  .feature-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+  .feature-item {
+    flex: 1 1 200px;
+    max-width: 250px;
+    background: #f7f9fb;
+    padding: 20px;
+    border-radius: 15px;
+  }
+  .feature-item h4 {
+    margin-top: 0;
+    color: #58cc02;
+  }
+  .languages-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  .language-item {
+    width: 80px;
+    height: 80px;
+    background: #f7f9fb;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+  }
+  .testimonial-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+  .testimonial-item {
+    flex: 1 1 250px;
+    max-width: 300px;
+    background: #f7f9fb;
+    padding: 20px;
+    border-radius: 15px;
+    font-style: italic;
+  }
+  footer {
+    background-color: #333;
+    color: #ccc;
+    text-align: center;
+    padding: 30px 20px;
+    font-size: 0.9em;
+  }
+  footer a {
+    color: #ccc;
+    margin: 0 10px;
+    text-decoration: none;
+  }
+  footer a:hover {
+    text-decoration: underline;
+  }
+</style>
+</head>
+<body>
+  <header>
+    <h1>HelloWorld</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Courses</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Hello World!</h2>
+    <p>Welcome to HelloWorld, your new favorite way to learn languages for free. Fun, effective, and designed for everyone.</p>
+    <img src="https://via.placeholder.com/300x200?text=Language+Learning" alt="Language Learning Illustration" />
+    <a href="#" class="cta-button">Get Started</a>
+  </section>
+
+  <section class="features">
+    <h3>Why Choose Us?</h3>
+    <div class="feature-list">
+      <div class="feature-item">
+        <h4>Fun & Engaging</h4>
+        <p>Learn through interactive lessons and gamified challenges.</p>
+      </div>
+      <div class="feature-item">
+        <h4>100% Free</h4>
+        <p>Access all courses without any cost or hidden fees.</p>
+      </div>
+      <div class="feature-item">
+        <h4>Proven Methods</h4>
+        <p>Science-based techniques to help you learn faster and retain more.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="languages">
+    <h3>Languages Offered</h3>
+    <div class="languages-list">
+      <div class="language-item">🇺🇸</div>
+      <div class="language-item">🇪🇸</div>
+      <div class="language-item">🇫🇷</div>
+      <div class="language-item">🇩🇪</div>
+      <div class="language-item">🇮🇹</div>
+      <div class="language-item">🇯🇵</div>
+      <div class="language-item">🇰🇷</div>
+      <div class="language-item">🇨🇳</div>
+    </div>
+  </section>
+
+  <section class="testimonials">
+    <h3>What Our Users Say</h3>
+    <div class="testimonial-list">
+      <div class="testimonial-item">
+        "HelloWorld made learning Spanish so much fun! I practice every day."
+      </div>
+      <div class="testimonial-item">
+        "I love the gamified lessons. It keeps me motivated to learn French."
+      </div>
+      <div class="testimonial-item">
+        "Best free language app out there. Highly recommend!"
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 HelloWorld. All rights reserved.
+    <div>
+      <a href="#">Privacy Policy</a>|
+      <a href="#">Terms of Service</a>|
+      <a href="#">Help</a>
+    </div>
+    <div>
+      Follow us:
+      <a href="#">Facebook</a>
+      <a href="#">Twitter</a>
+      <a href="#">Instagram</a>
+    </div>
+  </footer>
+</body>
+</html>
