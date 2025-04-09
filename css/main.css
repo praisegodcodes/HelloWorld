@@ -122,8 +122,22 @@ section {
   min-height: 300px;
 }
 
-.progress-info {
+/* Create a wrapper for the card deck effect */
+.card-deck {
+  position: relative;
   flex: 1 1 250px;
+  max-width: 250px;
+  min-height: 400px;
+  perspective: 1000px;
+  margin: 20px;
+  z-index: 1;
+}
+
+/* Style the main card (progress info) */
+.progress-info {
+  position: relative;
+  width: 100%;
+  height: 100%;
   max-width: 250px;
   min-height: 400px;
   background: #ffffff;
@@ -135,6 +149,98 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  z-index: 10; /* Ensure it's above the deck cards */
+  transition: transform 0.3s ease;
+}
+
+/* Create leftward-facing cards behind the main card using pseudo-elements */
+.card-deck::before, 
+.card-deck::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #f8f8f8;
+  border-radius: 25px;
+  border: 1px solid #eee;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+/* Position the first card in the deck - leftward tilt */
+.card-deck::before {
+  z-index: 2;
+  transform: rotate(-5deg) translateY(5px) translateX(-7px);
+}
+
+/* Position the second card in the deck - leftward tilt */
+.card-deck::after {
+  z-index: 1;
+  background: #f1f1f1;
+  transform: rotate(-8deg) translateY(10px) translateX(-12px);
+}
+
+/* Additional cards for a thicker deck - all facing left */
+.card-deck .card-3, 
+.card-deck .card-4,
+.card-deck .card-5 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 25px;
+  border: 1px solid #eee;
+  transition: transform 0.3s ease;
+}
+
+.card-deck .card-3 {
+  z-index: 0;
+  background: #eaeaea;
+  transform: rotate(-10deg) translateY(15px) translateX(-15px);
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.card-deck .card-4 {
+  z-index: -1;
+  background: #e5e5e5;
+  transform: rotate(-12deg) translateY(20px) translateX(-18px);
+  box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+}
+
+.card-deck .card-5 {
+  z-index: -2;
+  background: #e0e0e0;
+  transform: rotate(-14deg) translateY(25px) translateX(-21px);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+/* Hover effects for better interactivity - all facing left */
+.card-deck:hover .progress-info {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.card-deck:hover::before {
+  transform: rotate(-7deg) translateY(8px) translateX(-12px);
+}
+
+.card-deck:hover::after {
+  transform: rotate(-10deg) translateY(14px) translateX(-18px);
+}
+
+.card-deck:hover .card-3 {
+  transform: rotate(-13deg) translateY(20px) translateX(-24px);
+}
+
+.card-deck:hover .card-4 {
+  transform: rotate(-16deg) translateY(26px) translateX(-30px);
+}
+
+.card-deck:hover .card-5 {
+  transform: rotate(-19deg) translateY(32px) translateX(-36px);
 }
 
 .progress-info h3 {
